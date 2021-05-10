@@ -4,11 +4,13 @@ import './styles/form.scss'
 import './styles/header.scss'
 import './styles/resets.scss'
 
-
-
-import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
+import { ValidateURL } from './js/ValidateURL'
 
-console.log(checkForName);
 
-console.log("CHANGE!!");
+
+
+export {
+    handleSubmit,
+    ValidateURL
+}
