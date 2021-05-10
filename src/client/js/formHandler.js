@@ -8,7 +8,6 @@ function handleSubmit(event) {
     if(Client.ValidateURL(formURL)){
 
         const data = { blogURL: formURL };
-        console.log(data);
 
         fetch('http://localhost:8081/', {
             method: 'POST',

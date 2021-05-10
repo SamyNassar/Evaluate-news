@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <title>Article Checker</title>
     </head>
 
     <body>
@@ -17,14 +17,14 @@
         </header>
 
         <main>
-            <section>
+            <section id="form-container">
                 <form class="" onsubmit="return Client.handleSubmit(event)">
                     <input id="url-input" type="url" name="input" value="" placeholder="URL">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             </section>
 
-            <section>
+            <section id="result-container">
                 <strong>Form Results:</strong>
                 <div id="results"></div>
             </section>

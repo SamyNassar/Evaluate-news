@@ -1,7 +1,17 @@
-form {
-    border: 1px solid #545454;
-    border-radius: 3px;
-    padding: 40px;
+
+
+main{
+    
+    form {
+        border: 1px solid #545454;
+        border-radius: 3px;
+        padding: 40px;
+        background-color: bisque;
+    }
+
+    section#result-container{
+        background-color: rgb(179, 139, 91)
+    }
 }
 
 input {
