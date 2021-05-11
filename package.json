@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node src/server/index.js",
     "live": "nodemon src/server/index.js localhost 8081",
     "build-prod": "webpack --config webpack.prod.js",
@@ -29,6 +29,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.2.4",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^26.6.3",
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.7",
     "sass-loader": "^10.1.1",

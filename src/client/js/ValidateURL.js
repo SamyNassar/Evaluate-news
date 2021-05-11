@@ -12,8 +12,8 @@ function ValidateURL(url) {
     }else{
         alert("Enter URL !");
     }
-
     return false;
 }
 
-export { ValidateURL }
+// export { ValidateURL }
+module.exports = {ValidateURL};

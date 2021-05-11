@@ -19,7 +19,7 @@ function handleSubmit(event) {
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            document.getElementById('results').innerHTML = data
+            document.getElementById('results').innerHTML = `Agrement : ${data.agreement} <br> Confidence : ${data.confidence} <br> Irony : ${data.irony}`
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -28,5 +28,6 @@ function handleSubmit(event) {
 
     
 }
+
 
 export { handleSubmit }
