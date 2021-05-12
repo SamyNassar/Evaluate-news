@@ -7,27 +7,46 @@ function handleSubmit(event) {
 
     if(Client.ValidateURL(formURL)){
 
-        const data = { blogURL: formURL };
+        const url = { blogURL: formURL };
 
-        fetch('http://localhost:8081/', {
+        getData(url).then(data => {
+            console.log(data);
+            updateResult(data);
+        })
+    } else{
+        alert("Invalid URL !");
+    }
+}
+
+// Get data from the server.
+const getData = (url) => {
+    return fetch('http://localhost:8081/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data),
+            body: JSON.stringify(url),
         })
         .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            document.getElementById('results').innerHTML = `Agrement : ${data.agreement} <br> Confidence : ${data.confidence} <br> Irony : ${data.irony}`
-        })
         .catch((error) => {
             console.error('Error:', error);
         });
-    }
+        
+}
 
-    
+// Update Div result.
+const updateResult = (data) => {
+    document.getElementById('results').innerHTML = `Agrement : ${data.agreement} <br> Confidence : ${data.confidence} <br> Irony : ${data.irony}`
+
 }
 
 
-export { handleSubmit }
+
+
+// export { handleSubmit }
+module.exports = {
+    handleSubmit, 
+    getData, 
+    updateResult
+};
+

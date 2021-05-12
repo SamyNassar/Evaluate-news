@@ -4,13 +4,13 @@ function ValidateURL(url) {
         try {
             new URL(url);
         } catch (e) {
-            console.error(e);
-            alert("Invalid URL !");
+            // console.error(e);
+            // alert("Invalid URL !");
             return false;
         }
         return true
     }else{
-        alert("Enter URL !");
+        // alert("Enter URL !");
     }
     return false;
 }
